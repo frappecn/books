@@ -19,7 +19,7 @@ mkdir build_publish
 cd build_publish
 
 # Clone and cd into books
-git clone https://github.com/frappe/books --depth 1
+git clone https://github.com/frappecn/books --depth 1
 cd books
 
 # Copy creds to log_creds.txt
@@ -34,10 +34,6 @@ yarn install
 
 # Set .env and build
 export GH_TOKEN=$GH_TOKEN &&
- export CSC_IDENTITY_AUTO_DISCOVERY=true &&
- export APPLE_ID=$APPLE_ID &&
- export APPLE_TEAM_ID=$APPLE_TEAM_ID &&
- export APPLE_APP_SPECIFIC_PASSWORD=$APPLE_APP_SPECIFIC_PASSWORD &&
  yarn build --mac --publish=always
 
 cd ../books
